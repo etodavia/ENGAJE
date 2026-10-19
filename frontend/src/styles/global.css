@@ -2136,3 +2136,99 @@ img, video, svg { max-width: 100%; height: auto; }
   .contact-form-card,
   .contact-info-box { padding: 1.75rem 1.25rem; }
 }
+
+/* ==========================================================================
+   VISUAL PREMIUM EM TODAS AS SEÇÕES (desktop, tablet e celular)
+   ========================================================================== */
+.solution-card,
+.testimonial-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(185, 154, 92, 0.28);
+  background: linear-gradient(165deg, #ffffff 0%, #f3efe4 100%);
+  box-shadow: 0 14px 40px rgba(15, 43, 30, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.solution-card::before,
+.testimonial-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 5px;
+  background: linear-gradient(90deg, #315D46, #B99A5C, #d7be88);
+}
+.solution-card::after,
+.testimonial-card::after {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(185, 154, 92, 0.2), transparent 70%);
+  z-index: -1;
+  transition: transform 0.5s ease;
+}
+.solution-card:hover,
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(185, 154, 92, 0.55);
+  box-shadow: 0 26px 60px rgba(15, 43, 30, 0.16);
+}
+.solution-card:hover::after,
+.testimonial-card:hover::after { transform: scale(1.35); }
+.testimonial-card { border-left: 1px solid rgba(185, 154, 92, 0.28); }
+
+.solution-icon-box {
+  background: linear-gradient(135deg, #315D46, #153B2A);
+  color: #d7be88;
+  box-shadow: 0 8px 20px rgba(21, 59, 42, 0.25);
+}
+
+/* Etapas (fundo verde) com vidro e dourado */
+.step-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(160deg, rgba(255,255,255,0.10), rgba(255,255,255,0.03));
+  border: 1px solid rgba(215, 190, 136, 0.35);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 18px 40px rgba(4, 22, 14, 0.25);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.step-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: linear-gradient(90deg, #d7be88, #B99A5C);
+}
+.step-card:hover { transform: translateY(-6px); border-color: rgba(215, 190, 136, 0.7); }
+
+/* FAQ, contato e nota dos programas */
+.faq-item {
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(185, 154, 92, 0.28);
+  background: linear-gradient(165deg, #ffffff, #f6f2e8);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.faq-item:hover { border-color: rgba(185, 154, 92, 0.55); box-shadow: 0 12px 30px rgba(15, 43, 30, 0.1); }
+.contact-info-box {
+  background: linear-gradient(160deg, #0c3120 0%, #153B2A 55%, #315D46 100%);
+  border: 1px solid rgba(215, 190, 136, 0.5);
+  color: #f4f1e9;
+}
+.contact-info-box h2, .contact-info-box h3,
+.contact-info-box .section-title, .contact-direct-list li { color: #f4f1e9; }
+.contact-info-box p, .contact-info-box .section-subtitle { color: rgba(244, 241, 233, 0.85); }
+.contact-info-box .eyebrow { color: #d7be88; }
+.contact-form-card { border: 1px solid rgba(185, 154, 92, 0.3); box-shadow: 0 20px 50px rgba(15, 43, 30, 0.12); }
+.programs-note {
+  background: linear-gradient(90deg, rgba(220, 231, 223, 0.6), rgba(215, 190, 136, 0.25));
+  border: 1px solid rgba(185, 154, 92, 0.35);
+  border-radius: var(--radius-md);
+  color: var(--color-text-body);
+}
