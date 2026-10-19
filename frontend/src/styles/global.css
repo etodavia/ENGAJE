@@ -2094,3 +2094,45 @@ img, video, svg { max-width: 100%; height: auto; }
   .programs-grid > .program-card { flex-basis: 100%; max-width: 440px; }
   .program-card { padding: 2rem 1.5rem; }
 }
+
+/* ==========================================================================
+   ALINHAMENTO GERAL — grades sempre centralizadas
+   ========================================================================== */
+.solutions-grid,
+.testimonials-grid,
+.steps-grid {
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.solutions-grid > *,
+.testimonials-grid > * {
+  flex: 1 1 300px;
+  max-width: 380px;
+}
+.steps-grid > * {
+  flex: 1 1 240px;
+  max-width: 300px;
+}
+.section-title,
+.section-subtitle {
+  overflow-wrap: break-word;
+}
+@media (max-width: 720px) {
+  .solutions-grid > *,
+  .testimonials-grid > *,
+  .steps-grid > * {
+    flex-basis: 100%;
+    max-width: 440px;
+  }
+  .consultoria-grid,
+  .app-preview-grid,
+  .founder-grid,
+  .contact-section-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem;
+  }
+  .phone-device { width: 100%; max-width: 292px; }
+  .contact-form-card,
+  .contact-info-box { padding: 1.75rem 1.25rem; }
+}
