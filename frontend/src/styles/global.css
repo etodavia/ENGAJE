@@ -1996,3 +1996,101 @@ body { position: relative; }
 #root { overflow-x: clip; }
 img, video, svg { max-width: 100%; height: auto; }
 
+
+/* ==========================================================================
+   PROGRAMAS DE ENGAJAMENTO — versão premium centralizada
+   ========================================================================== */
+.programs-grid {
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.75rem;
+}
+.programs-grid > .program-card {
+  flex: 1 1 320px;
+  max-width: 380px;
+}
+.program-card {
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(185, 154, 92, 0.28);
+  background: linear-gradient(165deg, #ffffff 0%, #f3efe4 100%);
+  box-shadow: 0 14px 40px rgba(15, 43, 30, 0.08);
+  isolation: isolate;
+}
+.program-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 6px;
+  background: linear-gradient(90deg, #315D46, #B99A5C, #d7be88);
+}
+.program-card::after {
+  content: '';
+  position: absolute;
+  top: -90px;
+  right: -90px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(185, 154, 92, 0.22), transparent 70%);
+  z-index: -1;
+  transition: transform 0.5s ease;
+}
+.program-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 26px 60px rgba(15, 43, 30, 0.18);
+}
+.program-card:hover::after { transform: scale(1.35); }
+
+.program-tag {
+  display: inline-block;
+  padding: 0.32rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(185, 154, 92, 0.14);
+  border: 1px solid rgba(185, 154, 92, 0.4);
+  color: #8a6d33;
+}
+.program-items .check-bullet {
+  background: linear-gradient(135deg, #315D46, #153B2A);
+  color: #f4f1e9;
+}
+
+/* Cartão em destaque: verde profundo com dourado */
+.program-card.featured {
+  background: linear-gradient(160deg, #0c3120 0%, #153B2A 55%, #315D46 100%);
+  border: 1px solid rgba(215, 190, 136, 0.55);
+  border-top: 1px solid rgba(215, 190, 136, 0.55);
+  box-shadow: 0 24px 60px rgba(6, 36, 23, 0.35);
+}
+.program-card.featured::before {
+  background: linear-gradient(90deg, #d7be88, #B99A5C, #d7be88);
+}
+.program-card.featured::after {
+  background: radial-gradient(circle, rgba(215, 190, 136, 0.3), transparent 70%);
+}
+.program-card.featured h3 { color: #f4f1e9; }
+.program-card.featured .program-desc {
+  color: rgba(244, 241, 233, 0.85);
+  border-bottom-color: rgba(215, 190, 136, 0.3);
+}
+.program-card.featured .program-items li { color: #f4f1e9; }
+.program-card.featured .program-tag {
+  background: rgba(215, 190, 136, 0.18);
+  border-color: rgba(215, 190, 136, 0.6);
+  color: #d7be88;
+}
+.program-card.featured .check-bullet {
+  background: linear-gradient(135deg, #d7be88, #B99A5C);
+  color: #0c3120;
+}
+.program-card.featured .btn-primary {
+  background: linear-gradient(135deg, #d7be88, #B99A5C);
+  color: #0c3120;
+  border-color: transparent;
+}
+
+@media (max-width: 720px) {
+  .programs-grid > .program-card { flex-basis: 100%; max-width: 440px; }
+  .program-card { padding: 2rem 1.5rem; }
+}
