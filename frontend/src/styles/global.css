@@ -2246,3 +2246,13 @@ img, video, svg { max-width: 100%; height: auto; }
   justify-content: center;
 }
 .btn svg { flex-shrink: 0; }
+
+/* Botão "Entrar no Sistema" (cabeçalho/rodapé) sem quebra de linha */
+header .btn,
+footer .btn {
+  white-space: nowrap !important;
+  flex-wrap: nowrap;
+  overflow-wrap: normal;
+}
+/* Remove ícones de todos os botões */
+.btn svg { display: none !important; }
