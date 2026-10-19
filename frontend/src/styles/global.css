@@ -1989,3 +1989,10 @@ summary:focus-visible {
     padding-right: 1rem;
   }
 }
+
+/* Correção: impede rolagem lateral no celular */
+html, body { max-width: 100%; overflow-x: hidden; }
+body { position: relative; }
+#root { overflow-x: clip; }
+img, video, svg { max-width: 100%; height: auto; }
+
