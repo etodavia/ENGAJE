@@ -2256,3 +2256,24 @@ footer .btn {
 }
 /* Remove ícones de todos os botões */
 .btn svg { display: none !important; }
+
+/* Botão do menu mobile (três tracinhos) visível em verde escuro */
+.mobile-menu-toggle {
+  color: #153B2A !important;
+  background: rgba(220, 231, 223, 0.9) !important;
+  border: 1px solid rgba(21, 59, 42, 0.25) !important;
+  border-radius: 10px;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.mobile-menu-toggle svg {
+  display: block !important;
+  width: 24px;
+  height: 24px;
+  stroke: #153B2A !important;
+  color: #153B2A !important;
+  opacity: 1 !important;
+}
